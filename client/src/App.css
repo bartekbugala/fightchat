@@ -1,0 +1,82 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  background: lightgray;
+  padding: 20px;
+}
+ul {
+  background: white;
+  list-style: none;
+  padding: 10px;
+  border: gray 1px solid;
+  min-height: 200px;
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+}
+.chat {
+  flex: 1 1 80%;
+}
+.name {
+  flex: 1 1 20%;
+}
+#chat-input,
+#name-input {
+  flex: 1 1;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+#name-input {
+  max-width: 200px;
+}
+.chat {
+  max-height: 300px;
+}
+#chat-ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#chat-ul,
+#name-ul {
+  overflow-y: auto;
+  height: 100%;
+}
+
+#chat-input:focus,
+#chat-input:focus-within,
+#chat-input:focus-visible {
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.user {
+  user-select: none;
+  cursor: pointer;
+  padding: 2px;
+  transition: background-color 0.3s linear;
+}
+.user:hover {
+  background-color: lightgrey;
+}
+.attribute {
+  display: inline-flex;
+  border-radius: 5px;
+  height: 20px;
+  min-width: 20px;
+}
+.health {
+  color: darkred;
+}
+.attack {
+  color: grey;
+}
+.defense {
+  color: blue;
+}
