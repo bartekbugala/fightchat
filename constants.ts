@@ -6,8 +6,6 @@ dotenv.config({
 
 export const CLIENT = `./client/dist`;
 
-export const PORT = 8080;
-
 const {
   DB_NAME,
   DB_USERNAME,
@@ -16,7 +14,10 @@ const {
   DB_REMOTE_URL,
   DB_LOCAL_URL,
   DB_DIALECT,
+  APP_PORT,
 } = process.env;
+
+export const PORT = APP_PORT || 8080;
 
 export const DATABASE = {
   name: DB_NAME,

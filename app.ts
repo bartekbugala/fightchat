@@ -18,12 +18,12 @@ app.use(express.static('./client/dist/'));
 
 server.listen(PORT, () => console.log(`RPS started on port: ${PORT}`));
 
-const db = async () => {
-  const db = new DatabaseModule(); // Initialize the database
-  await db.init(DATABASE); // Initialize the database
-  await db.set('John', 'Doe');
-};
-db();
+// const db = async () => {
+//   const db = new DatabaseModule(); // Initialize the database
+//   await db.init(DATABASE); // Initialize the database
+//   await db.set('John', 'Doe');
+// };
+// db();
 const sharedState = {
   users: new Map<string, any>(), // Adjust the type accordingly
 };
