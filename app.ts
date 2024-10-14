@@ -14,7 +14,7 @@ const io = new Server(server, {
   cors: { origin: '*', methods: ['GET', 'POST'] },
 });
 
-app.use(express.static('./client/dist/'));
+app.use(express.static(CLIENT));
 
 server.listen(PORT, () => console.log(`RPS started on port: ${PORT}`));
 

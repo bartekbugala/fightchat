@@ -3,13 +3,13 @@ import './App.css';
 // import { useEffect } from 'react';
 // import useExternalScript from './hooks/useExternalScript';
 import * as io from 'socket.io-client';
-const socket = io.connect('http://localhost:8080');
+const socket = io.connect('http://localhost:8081');
 
 function App() {
-  const [isConnected, setIsConnected] = useState(socket.connected);
+  const [/* isConnected */, setIsConnected] = useState(socket.connected);
   const [msgEvents, setMsgEvents] = useState([]);
   const [value, setValue] = useState({ text: '' });
-  const [isLoading, setIsLoading] = useState(false);
+  const [/* isLoading */, setIsLoading] = useState(false);
 
   // const externalScript = 'app.js';
 
@@ -64,8 +64,7 @@ function App() {
           <ul id="chat-ul">
             {msgEvents.map((msg, idx) => (
               <li key={idx}>
-                {msg.username}:
-                {msg.text}
+                {msg.username}:{msg.text}
               </li>
             ))}
           </ul>

@@ -10,14 +10,14 @@ const {
   DB_NAME,
   DB_USERNAME,
   DB_PASSWORD,
-  DB_PORT,
+  // DB_PORT,
   DB_REMOTE_URL,
   DB_LOCAL_URL,
   DB_DIALECT,
   APP_PORT,
 } = process.env;
 
-export const PORT = APP_PORT || 8080;
+export const PORT = APP_PORT;
 
 export const DATABASE = {
   name: DB_NAME,
